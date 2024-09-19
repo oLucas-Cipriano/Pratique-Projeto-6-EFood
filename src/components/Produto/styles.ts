@@ -6,6 +6,13 @@ export const Card = styled.div`
   padding: 8px;
   color: ${Cores.beje};
 `
+export const Capa = styled.div`
+  img {
+    width: 304px;
+    height: 167px;
+    object-fit: cover;
+  }
+`
 
 export const Informacoes = styled.div`
   padding: 8px 0px;

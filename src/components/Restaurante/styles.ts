@@ -11,6 +11,13 @@ export const Card = styled.div`
     margin-left: 8px;
   }
 `
+export const Capa = styled.div`
+  img {
+    width: 472px;
+    height: 217px;
+    object-fit: cover;
+  }
+`
 
 export const Informacoes = styled.div`
   padding: 8px;

@@ -1,26 +1,15 @@
-import EstiloGlobal, { Container } from './styles'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Home from './pages/Home'
-import Footer from './components/Footer'
-import PerfilDoRestaurante from './pages/PerfilDoRestaurante'
+import { BrowserRouter } from 'react-router-dom'
 
-const Rotas = () => (
-  <Routes>
-    <Route path="/" element={<Home></Home>}></Route>
-    <Route
-      path="/perfil"
-      element={<PerfilDoRestaurante></PerfilDoRestaurante>}
-    ></Route>
-  </Routes>
-)
+import EstiloGlobal from './styles'
+import Footer from './components/Footer'
+
+import Rotas from './routes'
 
 function App() {
   return (
     <BrowserRouter>
       <EstiloGlobal></EstiloGlobal>
-      <Container>
-        <Rotas></Rotas>
-      </Container>
+      <Rotas></Rotas>
       <Footer></Footer>
     </BrowserRouter>
   )
