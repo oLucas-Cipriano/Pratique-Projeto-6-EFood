@@ -23,7 +23,7 @@ const Produto = ({ descricao, imagem, titulo }: Props) => {
         <Title>{titulo}</Title>
         <Descricao>{getDescricao(descricao)}</Descricao>
       </Informacoes>
-      <Botao>Adicionar ao carrinho</Botao>
+      <Botao>Mais detalhes</Botao>
     </Card>
   )
 }

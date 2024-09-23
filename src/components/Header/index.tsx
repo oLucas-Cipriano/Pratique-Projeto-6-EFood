@@ -8,11 +8,14 @@ import {
   LinkParaRestaurantes,
   Titulo
 } from './styles'
+import { useSelector } from 'react-redux'
+import { RootReducer } from '../../store'
 
 type Props = {
   variante: 'principal' | 'secundario'
 }
 const Header = ({ variante }: Props) => {
+  const { items } = useSelector((state: RootReducer) => state.cart)
   if (variante === 'principal') {
     return (
       <ImagemBackgroundPrincipal style={{ backgroundImage: `url(${fundo})` }}>
@@ -32,7 +35,7 @@ const Header = ({ variante }: Props) => {
         <Link to="/">
           <img src={logo} alt="eplay" />
         </Link>
-        <p>0 produto(s) no carrinho</p>
+        <p>{items.length} produto(s) no carrinho</p>
       </ImagemBackgroundSecundario>
     )
   }

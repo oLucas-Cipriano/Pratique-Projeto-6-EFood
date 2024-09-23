@@ -31,7 +31,8 @@ export const Modal = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #000;
+    opacity: 0.8;
   }
 `
 export const ModalContent = styled.div`
@@ -41,7 +42,7 @@ export const ModalContent = styled.div`
   max-height: 344px;
   background-color: ${Cores.vermelhoClaro};
   color: ${Cores.branco};
-  z-index: 2;
+  z-index: 1;
   padding: 32px;
 `
 export const Informacoes = styled.div`
