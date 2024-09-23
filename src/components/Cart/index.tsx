@@ -10,7 +10,7 @@ import {
 
 import { useDispatch, useSelector } from 'react-redux'
 import { RootReducer } from '../../store'
-import { close } from '../../store/reducers/cart'
+import { close, remove } from '../../store/reducers/cart'
 import lixeira from '../../assets/images/lixeira-de-reciclagem 2.svg'
 import { formataPreco } from '../ProdutoList'
 
@@ -20,6 +20,9 @@ const Cart = () => {
 
   const closeCart = () => {
     dispatch(close())
+  }
+  const removeItem = (id: number) => {
+    dispatch(remove(id))
   }
 
   const getTotalPrice = () => {
@@ -41,7 +44,11 @@ const Cart = () => {
                 <p>{formataPreco(item.preco)}</p>
               </Infos>
 
-              <Lixeira src={lixeira} alt="remover" />
+              <Lixeira
+                onClick={() => removeItem(item.id)}
+                src={lixeira}
+                alt="remover"
+              />
             </CartItem>
           ))}
         </ul>
