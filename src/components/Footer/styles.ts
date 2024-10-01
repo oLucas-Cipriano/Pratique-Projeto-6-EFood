@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Cores } from '../../styles'
+import { colors } from '../../styles'
 
 export const RedesSociais = styled.div`
   margin-top: 32px;
@@ -16,7 +16,7 @@ export const FooterContainer = styled.footer`
   justify-content: center;
   align-items: center;
   padding: 40px 0px;
-  background-color: ${Cores.beje};
+  background-color: ${colors.beige};
 
   a {
     cursor: pointer;

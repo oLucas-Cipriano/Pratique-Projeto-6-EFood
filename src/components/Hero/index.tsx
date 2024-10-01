@@ -1,26 +1,25 @@
 import { useParams } from 'react-router-dom'
-import { Restaurante } from '../../pages/Home'
-import { ImagemBackground, NomeDoRestaurante, Titulo } from './styles'
+import * as S from './styles'
 
 type Props = {
-  restaurantes: Restaurante[]
+  restaurants: Restaurant[]
 }
 
-const Hero = ({ restaurantes }: Props) => {
+const Hero = ({ restaurants }: Props) => {
   const { id } = useParams()
-  const restauranteIndex = Number(id) - 1
+  const restaurantIndex = Number(id) - 1
 
-  if (isNaN(restauranteIndex) || !restaurantes[restauranteIndex]) {
+  if (isNaN(restaurantIndex) || !restaurants[restaurantIndex]) {
     return <p>Restaurante não encontrado</p>
   }
 
-  const restaurante = restaurantes[restauranteIndex]
+  const restaurant = restaurants[restaurantIndex]
 
   return (
-    <ImagemBackground style={{ backgroundImage: `url(${restaurante.capa})` }}>
-      <Titulo>{restaurante.tipo}</Titulo>
-      <NomeDoRestaurante>{restaurante.titulo}</NomeDoRestaurante>
-    </ImagemBackground>
+    <S.BackgroundImage style={{ backgroundImage: `url(${restaurant.capa})` }}>
+      <S.Title>{restaurant.tipo}</S.Title>
+      <S.RestaurantName>{restaurant.titulo}</S.RestaurantName>
+    </S.BackgroundImage>
   )
 }
 

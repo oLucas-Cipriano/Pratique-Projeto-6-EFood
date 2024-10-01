@@ -1,12 +1,12 @@
 import styled from 'styled-components'
-import { Cores } from '../../styles'
+import { colors } from '../../styles'
 
 export const Card = styled.div`
-  background-color: ${Cores.vermelhoClaro};
+  background-color: ${colors.lightRed};
   padding: 8px;
-  color: ${Cores.beje};
+  color: ${colors.beige};
 `
-export const Capa = styled.div`
+export const Cover = styled.div`
   img {
     width: 304px;
     height: 167px;
@@ -14,7 +14,7 @@ export const Capa = styled.div`
   }
 `
 
-export const Informacoes = styled.div`
+export const Informations = styled.div`
   padding: 8px 0px;
 `
 
@@ -22,16 +22,16 @@ export const Title = styled.h3`
   font-weight: 900;
   font-size: 16px;
 `
-export const Descricao = styled.p`
+export const Description = styled.p`
   font-size: 14px;
   line-height: 22px;
 `
 
-export const Botao = styled.button`
+export const Button = styled.button`
   display: block;
   width: 100%;
-  color: ${Cores.vermelhoClaro};
-  background-color: ${Cores.beje};
+  color: ${colors.lightRed};
+  background-color: ${colors.beige};
   border: none;
   padding: 4px 0;
   font-weight: bold;

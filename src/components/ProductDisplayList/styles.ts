@@ -1,14 +1,25 @@
 import styled from 'styled-components'
-import { Cores } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const List = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 32px;
+
+  @media (max-width: ${breakpoints.desktop}) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: ${breakpoints.tablet}) {
+    grid-template-columns: 1fr;
+  }
 `
 
 export const ListContainer = styled.div`
   padding: 56px 171px 120px;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    padding: 25px 80px 60px;
+  }
 `
 export const Modal = styled.div`
   position: fixed;
@@ -40,12 +51,12 @@ export const ModalContent = styled.div`
   position: relative;
   max-width: 1024px;
   max-height: 344px;
-  background-color: ${Cores.vermelhoClaro};
-  color: ${Cores.branco};
+  background-color: ${colors.lightRed};
+  color: ${colors.white};
   z-index: 1;
   padding: 32px;
 `
-export const Informacoes = styled.div`
+export const Informations = styled.div`
   margin-left: 24px;
   h4 {
     font-weight: 900;
@@ -59,12 +70,12 @@ export const Informacoes = styled.div`
     margin-bottom: 16px;
   }
 `
-export const ImagemDoItemDoCardapio = styled.img`
+export const MenuItemImage = styled.img`
   width: 280px;
   height: 280px;
 `
 
-export const Fechar = styled.img`
+export const Close = styled.img`
   position: absolute;
   top: 8px;
   right: 8px;
@@ -72,10 +83,10 @@ export const Fechar = styled.img`
   height: 16px;
 `
 
-export const Botao = styled.button`
+export const Button = styled.button`
   display: inline-block;
-  color: ${Cores.vermelhoClaro};
-  background-color: ${Cores.beje};
+  color: ${colors.lightRed};
+  background-color: ${colors.beige};
   border: none;
   padding: 4px 7px;
   font-weight: bold;

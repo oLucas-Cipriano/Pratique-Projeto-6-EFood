@@ -1,13 +1,13 @@
 import styled from 'styled-components'
-import { Cores } from '../../styles'
+import { colors } from '../../styles'
 
-export const ImagemBackground = styled.div`
+export const BackgroundImage = styled.div`
   width: 100%;
   height: 280px;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  color: ${Cores.branco};
+  color: ${colors.white};
 
   &::before {
     content: '';
@@ -21,7 +21,7 @@ export const ImagemBackground = styled.div`
   }
 `
 
-export const Titulo = styled.h2`
+export const Title = styled.h2`
   font-size: 32px;
   font-weight: 100;
   position: absolute;
@@ -30,7 +30,7 @@ export const Titulo = styled.h2`
   z-index: 2;
 `
 
-export const NomeDoRestaurante = styled.h3`
+export const RestaurantName = styled.h3`
   font-size: 32px;
   font-weight: 900;
   position: absolute;

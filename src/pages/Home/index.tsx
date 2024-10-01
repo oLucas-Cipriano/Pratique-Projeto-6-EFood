@@ -1,37 +1,19 @@
 import Header from '../../components/Header'
-import RestauranteList from '../../components/RestauranteList'
-import { useGetRestaurantesQuery } from '../../services/api'
+import RestaurantDisplayList from '../../components/RestaurantDisplayList'
+
+import { useGetRestaurantsQuery } from '../../services/api'
+
 import { Container } from '../../styles'
 
-export type Restaurante = {
-  id: number
-  titulo: string
-  destacado: boolean
-  tipo: string
-  avaliacao: number
-  descricao: string
-  capa: string
-  cardapio: [
-    {
-      foto: string
-      preco: number
-      id: number
-      nome: string
-      descricao: string
-      porcao: string
-    }
-  ]
-}
-
 const Home = () => {
-  const { data: restaurantes } = useGetRestaurantesQuery()
+  const { data } = useGetRestaurantsQuery()
 
-  if (restaurantes) {
+  if (data) {
     return (
       <>
-        <Header variante="principal"></Header>
+        <Header variant="principal"></Header>
         <Container>
-          <RestauranteList restaurantes={restaurantes}></RestauranteList>
+          <RestaurantDisplayList restaurantList={data}></RestaurantDisplayList>
         </Container>
       </>
     )

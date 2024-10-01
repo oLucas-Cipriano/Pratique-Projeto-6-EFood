@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Cores } from '../../styles'
+import { colors } from '../../styles'
 
 export const Overlay = styled.div`
   position: absolute;
@@ -26,14 +26,14 @@ export const CartContainer = styled.div`
   }
 `
 export const SideBar = styled.aside`
-  background-color: ${Cores.vermelhoClaro};
+  background-color: ${colors.lightRed};
   z-index: 1;
   padding: 32px 8px 0px 8px;
   max-width: 360px;
   width: 100%;
 
   > div {
-    color: ${Cores.beje};
+    color: ${colors.beige};
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -49,8 +49,8 @@ export const SideBar = styled.aside`
 
   button {
     width: 100%;
-    color: ${Cores.vermelhoClaro};
-    background-color: ${Cores.beje};
+    color: ${colors.lightRed};
+    background-color: ${colors.beige};
     border: none;
     padding: 4px 0px;
     font-weight: bold;
@@ -58,23 +58,30 @@ export const SideBar = styled.aside`
     cursor: pointer;
     line-height: 16px;
   }
+
+  .empty-text {
+    font-size: 14px;
+    line-height: 22px;
+    color: ${colors.white};
+    text-align: center;
+  }
 `
 
 export const CartItem = styled.li`
-  background-color: ${Cores.beje};
+  background-color: ${colors.beige};
   margin-bottom: 16px;
   position: relative;
   padding: 8px 0 12px 8px;
   display: flex;
 `
-export const ImagemDoItemDoCardapio = styled.img`
+export const MenuItemImage = styled.img`
   height: 80px;
   width: 80px;
   object-fit: cover;
   margin-right: 8px;
 `
 
-export const Lixeira = styled.img`
+export const Trash = styled.img`
   position: absolute;
   height: 16px;
   width: 16px;

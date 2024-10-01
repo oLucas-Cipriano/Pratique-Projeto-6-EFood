@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { Cores } from '../../styles'
+import { colors } from '../../styles'
 
-export const ImagemBackgroundPrincipal = styled.div`
+export const PrincipalBackgroundImage = styled.div`
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,21 +14,25 @@ export const ImagemBackgroundPrincipal = styled.div`
   flex-direction: column;
 `
 
-export const ImagemBackgroundSecundario = styled(ImagemBackgroundPrincipal)`
+export const SecundaryBackgroundImage = styled(PrincipalBackgroundImage)`
   justify-content: space-between;
   flex-direction: row;
   height: 186px;
   font-size: 18px;
   padding: 0 171px;
+
+  p {
+    cursor: pointer;
+  }
 `
 
-export const Titulo = styled.h1`
+export const Title = styled.h1`
   font-size: 36px;
   line-height: 42px;
   text-align: center;
   margin-top: 136px;
 `
-export const LinkParaRestaurantes = styled(Link)`
+export const LinkToRestaurants = styled(Link)`
   text-decoration: none;
-  color: ${Cores.vermelhoClaro};
+  color: ${colors.lightRed};
 `
